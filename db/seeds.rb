@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 #---
 # Excerpted from "Agile Web Development with Rails 5.1",
 # published by The Pragmatic Bookshelf.
