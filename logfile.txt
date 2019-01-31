@@ -1,0 +1,59 @@
+commit 677d998249521aa5fd2231b41692e9b96357e1ec
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Jan 30 20:33:31 2019 +0000
+
+    fixed css sytling to display all books as same size
+
+commit d6ec4f2809efc6f6808bee0a80578cc12a9fdcc5
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Jan 30 15:58:02 2019 +0000
+
+    added missing comma to products/show.html.erb on line 15
+
+commit 194fc9e89be615da36963461b0f545dee4987241
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Jan 30 15:10:16 2019 +0000
+
+    Completed rails girls to set up picture uploading, added carrierwave gems, and changed .gitignore to ignore images in public/uploads folder
+
+commit 875dc2b8664fcbe56ac39bb135a6a13a4e6602c9
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Jan 28 20:08:04 2019 +0000
+
+    Added formating to price of products (Iteration C3)
+
+commit 78616760424b122be8df522ecb598294c1f41d4b
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Jan 28 19:47:18 2019 +0000
+
+    Added sidebar and header to product list
+
+commit fec8b2f977fe21e0fed7480f3848a1f99c989811
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Jan 28 19:21:05 2019 +0000
+
+    Created store_controller and fixed styling of product list page
+
+commit 8bb9523c843a5284159f0e2e458fe42a0f53f29b
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Jan 28 18:51:38 2019 +0000
+
+    Ensured user input into new product form meets requirments (Part B1)
+
+commit 5a07a653a236e325de20d9f8eee4435a0d886d5d
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Jan 27 23:43:54 2019 +0000
+
+    Finished A2 - updated layout of Product List
+
+commit aa604b75b93c1d0b5a77489ac558e9714a7751d4
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Jan 27 21:07:02 2019 +0000
+
+    Added product list (Task A1)
+
+commit 262f0116e910ad52472e76e2153d8ed19a9fbcf3
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Jan 27 18:52:24 2019 +0000
+
+    Created new rails project (depot)
