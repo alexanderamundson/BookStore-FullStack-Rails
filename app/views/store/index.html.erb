@@ -2,21 +2,26 @@
   <aside id="notice"><%= notice %></aside>
 <% end %>
 
+<div class="container">
+<% if flash[:index] %>
+<div class="notice"> <%= flash[:index] %> </div>
+<% end %>
+
 <h1>Your Pragmatic Catalog</h1>
 
+
 <ul class="catalog">
-	<% @products.each do |product| %>
-	<li>
-		<%= image_tag product.image_url.url, width: '20%'  %>
-		<h2><%= product.title %></h2>
-		<p>
-			<%= sanitize(product.description) %>
-		</p>
-		<div class="price">
-			<%= number_to_currency(product.price) %>
-			<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
-			
-		</div>
-	</li>
-	<% end %>
+<% @products.each do |product| %>
+<li>
+<%= image_tag product.image_url.url, width: '20%'  %>
+<h2><%= product.title %></h2>
+<p>
+<%= sanitize(product.description) %>
+</p>
+<div class="price">
+<%= number_to_currency(product.price) %>
+<%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+</div>
+</li>
+<% end %>
 </ul>
