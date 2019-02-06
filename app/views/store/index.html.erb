@@ -3,13 +3,23 @@
 <% end %>
 
 <div class="container">
-<% if flash[:index] %>
-<div class="notice"> <%= flash[:index] %> </div>
-<% end %>
+  <% if flash[:index] %>
+  <div class="notice"> 
+    <%= flash[:index] %> 
+  </div>
+  <% end %>
+</div>  
 
 <h1>Your Pragmatic Catalog</h1>
 
+<%= content_tag :div,
+  id: "books",
+  data: @products.to_json do %>
+  
+  <%= javascript_pack_tag 'hello_react' %>
 
+<% end %>    
+    
 <ul class="catalog">
 <% @products.each do |product| %>
 <li>
