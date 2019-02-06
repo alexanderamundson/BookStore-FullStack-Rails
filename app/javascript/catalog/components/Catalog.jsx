@@ -22,7 +22,6 @@ export default class Catalog extends React.Component {
     render = () => {
         return(
             
-            
             <div>
                 <h3>
                     There are {this.state.books.length} books in the catalog.

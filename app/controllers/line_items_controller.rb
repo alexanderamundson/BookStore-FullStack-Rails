@@ -34,6 +34,10 @@ class LineItemsController < ApplicationController
         session[:counter] = 0
         format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
         format.json { render :show, status: :created, location: @line_item }
+        product.popularity = product.popularity + 1
+        product.update_attribute(:popularity, product.popularity)
+        
+        
       else
         format.html { render :new }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }

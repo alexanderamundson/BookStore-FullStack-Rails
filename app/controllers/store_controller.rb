@@ -8,13 +8,8 @@ class StoreController < ApplicationController
       if session[:counter] > 5
         flash.now[:index]="You visited the catalog #{session[:counter]}
            times".pluralize(session[:counter])+" without buying anything!... Come on!"
-          
-    
-    
       end
     end    
-  
-  
   
     respond_to do |format|
         format.html {
