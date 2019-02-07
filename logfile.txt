@@ -1,3 +1,51 @@
+commit 6f19568781f8d56205d09c20a87d71295e231db4
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 6 21:59:02 2019 +0000
+
+    Added sorting based on popularity feature (2.2)
+
+commit 3a6b921dea98e67844e1641262c83e2172311194
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 6 21:02:43 2019 +0000
+
+    Started to build SPA catalog (3.5)
+
+commit be3bfd06ad3acaf6ce026d692c788a511cb8b9ee
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 6 19:02:27 2019 +0000
+
+    Enabled hot-reloading (3.)
+
+commit ab2d5c5a5e8bc5bee939744708e8e00a5352fd13
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 6 17:59:53 2019 +0000
+
+    Used React to render number of products on homepage (3.3)
+
+commit 3d5bbd1e3b6ef6c88c489f93552a7f7a3a0c92ca
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 5 22:10:10 2019 +0000
+
+    Fixed destroy product bug, created My Shopping Cart link, and finished playtime (2.1)
+
+commit e3ef34b530d2cf47e5f7376ebd6a9fe54f7633f8
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sat Feb 2 20:45:39 2019 +0000
+
+    Created button in store/index.html to add a new line_item to cart (D3)
+
+commit 178ac7269a199292d7ccad0e69b8d6e216b0c3bb
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Jan 31 22:52:10 2019 +0000
+
+    Connected products to carts with line_items controller, ensured products that are referenced by line items are not destroyed. (D2)
+
+commit e8aba23c11cbb2355914b5d02189ac4bf8505807
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Jan 31 19:50:36 2019 +0000
+
+    added carts_controller (Iteration D1)
+
 commit 677d998249521aa5fd2231b41692e9b96357e1ec
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Wed Jan 30 20:33:31 2019 +0000

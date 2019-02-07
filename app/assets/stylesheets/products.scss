@@ -32,10 +32,12 @@
     @media (min-width: 30em) {
       display: block;
       img {
-        height: 20em;
-        width: 15em;
+       
         padding: 2px;
         border: 1px solid #021a40;
+        box-shadow: 0.176em 0.176em 0.354em 0px rgba(0,0,0,0.75);
+        height: 20em;
+        width: 15em;
       }
     }
   }
