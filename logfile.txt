@@ -1,4 +1,10 @@
-commit 6f19568781f8d56205d09c20a87d71295e231db4
+commit 704793dfdf8b0a63280cd9d52dec72b8a977da12
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 7 01:08:44 2019 +0000
+
+    Added to StoreController to make homepage load correctly
+
+commit 5f19568781f8d56205d09c20a87d71295e231db4
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Wed Feb 6 21:59:02 2019 +0000
 
