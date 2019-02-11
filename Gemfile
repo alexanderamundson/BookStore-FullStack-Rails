@@ -8,13 +8,16 @@ gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record #### carrierwave for p2
 
 group :development do
-    gem 'sqlite3'
+    gem 'sqlite3', "~> 1.3.6"
 end
 
 gem 'carrierwave'
 gem 'carrierwave-aws'
 gem 'mini_magick'
 gem 'webpacker'
+gem "jquery-rails"
+gem "bootstrap", "~> 4.2.1"
+gem "font-awesome-rails"
 
 group :production do
     gem 'pg', '0.18.4'

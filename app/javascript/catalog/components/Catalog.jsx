@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import BookList from './BookList';
+
 
 export default class Catalog extends React.Component {
 
@@ -20,13 +22,12 @@ export default class Catalog extends React.Component {
     };  
 
     render = () => {
-        return(
-            
-            <div>
-                <h3>
-                    There are {this.state.books.length} books in the catalog.
-                </h3>
-            </div>
+        return (
+      <div className="container">
+        <div className="row">
+              <BookList books={this.state.books}/>
+          </div>
+      </div>
         );
     };
 } 
