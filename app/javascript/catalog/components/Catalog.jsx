@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import BookList from './BookList';
-
+import SearchForm from './SearchForm';
 
 export default class Catalog extends React.Component {
 
@@ -44,10 +44,16 @@ export default class Catalog extends React.Component {
         });
     };
     
+    handleSearch = (books) => {
+        this.setState({ books: books });
+    };
 
     render = () => {
         return (
            <div className="container">
+              <div className="row">
+                <SearchForm handleSearch={this.handleSearch} />
+              </div>    
               <div className="row">
                 <BookList   books={this.state.books}
                    sort ={this.state.sort}

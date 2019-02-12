@@ -27,6 +27,11 @@ class StoreController < ApplicationController
     end
   end
   
+  def search
+    products = Product.where("title LIKE '%#{params[:query]}%'")
+    render json: products
+  end
+  
   private 
     def sort_by
        %w(title
