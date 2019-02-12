@@ -20,10 +20,10 @@
      <ul>
        <li><%= link_to "Home", store_index_path(spa: false) %></li>            
        <li><%= link_to "Home (SPA)", store_index_path(spa: true) %></li>
+       <li><%= link_to "my shopping cart", myCart_path(session[:cart_id]) %></li>
        <li><a href="/questions">Questions</a></li>
        <li><a href="/news">News</a></li>
        <li><a href="/contact">Contact</a></li>
-       <li><%= link_to "my shopping cart", myCart_path(session[:cart_id]) %></li>
      </ul>
    </nav>
 

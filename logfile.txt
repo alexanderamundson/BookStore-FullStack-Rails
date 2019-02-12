@@ -1,3 +1,63 @@
+commit 431370379d5b2139ab59685ec724184a11410f72
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 12 19:04:11 2019 +0000
+
+    Updated bundler and gemfile
+
+commit 57412857f805bfcef644790ace6da34cda68048d
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 12 18:04:44 2019 +0000
+
+    Modified gemfile to make DB work
+
+commit 9f9c3b9ea719f63e68b33506e16af91463c7f186
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 12 17:36:21 2019 +0000
+
+    Appended a functional Add-To-Cart button to Home SPA
+
+commit a04b09128735a2643464fb32ebc7f57e190de74e
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 12 17:11:32 2019 +0000
+
+    Added ReactJS search bar to search books by title (3.2)
+
+commit 1d1f934882d6ac98fecc24dd8832a158b2ba7142
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Feb 11 20:14:41 2019 +0000
+
+    Finished client and server side of sorting by title, popularity, and price (3.1)
+
+commit 3723cfcf9d271eb8dbb7b77eb2bf8a5c4ef442d5
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Feb 11 19:33:29 2019 +0000
+
+    Used ReactJS to enhance the design of Home SPA (P4 2.2)
+
+commit 64792106b6db3eb88102081b475a79b1e77aa4e7
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Feb 10 20:37:08 2019 +0000
+
+    Ensured users can only see their own cart and can't destroy others' lineitems
+
+commit 63ecd569a01d0fab216c2e6a31b1b2feefabe7fe
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Feb 10 19:59:39 2019 +0000
+
+    Styled shopping cart page and add total price of cart (E3)
+
+commit 9de11ba1e269efc44cc1401757e9c58e73914add
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Feb 10 19:30:02 2019 +0000
+
+    Added error handling/security measure to protect shopping cart page (E2)
+
+commit ffbc3c38b37840dd14f9d584eff38338db8c2984
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Fri Feb 8 19:57:09 2019 +0000
+
+    Ran migration to make app display correct quantity of line items and group together (E1)
+
 commit 704793dfdf8b0a63280cd9d52dec72b8a977da12
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Thu Feb 7 01:08:44 2019 +0000
