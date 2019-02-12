@@ -47,6 +47,24 @@ export default class Catalog extends React.Component {
     handleSearch = (books) => {
         this.setState({ books: books });
     };
+    
+ 
+    handleAddToCart = (id) => {
+
+        var self = this;
+
+        axios.defaults.headers.common['X-Requested-With'] = "XMLHttpRequest";
+        axios.post('/line_items', {product_id: id})
+            .then(function (response) {
+                console.log(response);
+                window.location = response.headers.location;
+             })
+            .catch(function (error) {
+                console.log(error);
+                alert('Cannot sort events: ', error);
+        });
+
+    };
 
     render = () => {
         return (
@@ -55,10 +73,11 @@ export default class Catalog extends React.Component {
                 <SearchForm handleSearch={this.handleSearch} />
               </div>    
               <div className="row">
-                <BookList   books={this.state.books}
-                   sort ={this.state.sort}
-                   order={this.state.order}
-                   handleSortColumn={this.handleSortColumn}/>
+                <BookList books={this.state.books}
+                    sort ={this.state.sort}
+                    order={this.state.order}
+                    handleSortColumn={this.handleSortColumn}
+                    handleAddToCart={this.handleAddToCart} />
               </div>
            </div>
         );

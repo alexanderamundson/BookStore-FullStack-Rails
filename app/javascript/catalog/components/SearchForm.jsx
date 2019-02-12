@@ -26,6 +26,6 @@ export default class SearchForm extends React.Component {
              className="form-control"
              placeholder="Type the title of the book you are searching here..."
              ref="query" />
-    )
+    );
   }
 }
