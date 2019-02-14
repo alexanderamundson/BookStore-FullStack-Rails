@@ -28,15 +28,16 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
     product = Product.find(params[:product_id])
+    product.popularity = product.popularity + 1
+    product.update_attribute(:popularity, product.popularity)
     @line_item = @cart.add_product(product)
 
     respond_to do |format|
       if @line_item.save
         session[:counter] = 0
-        product.popularity = product.popularity + 1
-        product.update_attribute(:popularity, product.popularity)
+        
         format.html { redirect_to store_index_url }
-        format.js
+        format.js   { @current_item = @line_item }
         format.json { redirect_to cart_path(@line_item.cart)}
         
       else
