@@ -41,7 +41,7 @@ class LineItemsController < ApplicationController
         
         format.html { redirect_to store_index_url }
         format.js   { @current_item = @line_item }
-        format.json { redirect_to cart_path(@line_item.cart)}
+        format.json { }  
         
       else
         format.html { render :new }
