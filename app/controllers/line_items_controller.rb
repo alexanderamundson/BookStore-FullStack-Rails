@@ -3,6 +3,9 @@ class LineItemsController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
+  
+  before_action :ensure_line_item_exists,only: [:ensure_quantity_not_zero_or_less]
+  before_action :ensure_quantity_not_zero_or_less, only: [:decrement]
 
   # GET /line_items
   # GET /line_items.json
@@ -68,8 +71,31 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
+      
     end
   end
+  
+   # PATCH/PUT /line_items/1
+  def decrement
+    item = LineItem.find(params[:id])
+    product = item.product
+    item.quantity -= 1
+    item.product.popularity -= 1
+    product.update_attribute(:popularity, product.popularity)
+    respond_to do |format|
+      if item.save
+        format.html { redirect_to store_index_url }
+        format.js
+        format.json { @current_item = @line_item }
+      else
+        format.html { render :new }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      end
+    end  
+  end
+  
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -84,4 +110,39 @@ class LineItemsController < ApplicationController
     def line_item_params
       params.require(:line_item).permit(:product_id)
     end
+    
+    
+    # Runs before Decrement.
+    # Destroys the line item if the quantity is 1 or less when decrement is called
+    def ensure_quantity_not_zero_or_less
+      item = LineItem.find(params[:id])
+        if item.quantity <= 1
+          # Deal with popularity first
+          product = item.product
+          item.quantity -= 1
+          item.product.popularity -= 1
+          product.update_attribute(:popularity, product.popularity)
+          # Then destroy the item
+          item.destroy
+
+          respond_to do |format|
+            format.html { redirect_to store_index_url }
+            format.js
+            format.json { @current_item = @line_item }
+          end
+        end
+    end
+
+    # Runs before ensure_quantity_not_zero_or_less
+    # Preventative method that checks if the line item even exists before further operations are attempted.
+    def ensure_line_item_exists
+        if LineItem.where(params[:id]).nil?
+          format.html { redirect_to store_index_url }
+          format.js
+          format.json { @current_item = @line_item }
+        else
+          :decrement
+        end
+    end
+
 end
