@@ -11,6 +11,13 @@ class Cart < ApplicationRecord
       current_item
     end
     
+    def delete_product(product)
+        current_item = line_items.find_by(product_id: product.id)
+        current_item.quantity -= 1
+        
+        current_item
+    end
+    
     def total_price
       line_items.to_a.sum { |item| item.total_price }
     end

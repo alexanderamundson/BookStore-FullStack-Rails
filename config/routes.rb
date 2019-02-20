@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   resources :line_items do
     member do
-      patch "decrement", to: 'line_items#decrement', as: 'decrement'
+      patch "decrement"
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
