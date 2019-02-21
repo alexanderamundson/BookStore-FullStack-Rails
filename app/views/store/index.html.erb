@@ -27,9 +27,11 @@
           remote: true
           %>
        
-      <p>This book has been put in someone's shopping cart
-         <%= product.popularity.to_i %>
-         times
+      <p>
+        <i class="product_<%= product.id %>">
+         This book has been put in someone's shopping cart
+         <%= pluralize product.popularity.to_i, 'time' %>
+         </i>
       </p>
       </div>
     </li>

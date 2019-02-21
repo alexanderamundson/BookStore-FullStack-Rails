@@ -39,13 +39,13 @@ class LineItemsController < ApplicationController
         session[:counter] = 0
         
         format.html { redirect_to store_index_url }
-        format.js   { @current_item = @line_item }
-        format.json { }  
+        format.js   { @current_item = @line_item; @product = product }
+        format.json { redirect_to cart_path(@line_item.cart)}  
         
       else
         format.html { render :new }
         
-        format.json {}
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -97,11 +97,11 @@ class LineItemsController < ApplicationController
         if @line_item.save
           format.html { redirect_to store_index_url }
           format.js { @current_item = @line_item;
-                    @product = product
-          }
+                    @product = product }
           format.json {redirect_to cart_path(@line_item.cart)}
         else  
-          format.json { render json: @line_item.errors, status: :unprocessable_entity }
+           format.json {redirect_to cart_path(@line_item.cart)}
+          
         end
       end
     end  
