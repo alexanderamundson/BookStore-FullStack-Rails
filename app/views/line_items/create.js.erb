@@ -5,4 +5,6 @@ if ( $('#notice').length ){
 if ($('#cart tr').length == 2) {
     $('#cart').show(); }
 
-$('.product_<%=@product.id%>').html ("<%= pluralize @product.popularity.to_i, 'time' %>")
+$('.product_<%=@product.id%>').html("<%= pluralize @product.popularity.to_i, 'time' %>")
+
+

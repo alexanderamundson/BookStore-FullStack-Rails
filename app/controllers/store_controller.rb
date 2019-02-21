@@ -13,7 +13,7 @@ class StoreController < ApplicationController
            times".pluralize(session[:counter])+" without buying anything!... Come on!"
       end
     end    
-  
+    
     respond_to do |format|
         format.html {
             if (params[:spa] && params[:spa] == "true")
@@ -25,6 +25,7 @@ class StoreController < ApplicationController
             end
         }
         format.json {render json: Product.order(sort_by + ' ' + order)}
+        
     end
   end
   
