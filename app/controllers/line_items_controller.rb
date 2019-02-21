@@ -40,7 +40,7 @@ class LineItemsController < ApplicationController
         
         format.html { redirect_to store_index_url }
         format.js   { @current_item = @line_item; @product = product }
-        format.json { redirect_to cart_path(@line_item.cart)}  
+        format.json { }  
         
       else
         format.html { render :new }
@@ -77,9 +77,10 @@ class LineItemsController < ApplicationController
   
    # PATCH/PUT /line_items/1
   def decrement
+    @line_item = LineItem.find(params[:id])
     @cart = Cart.find(session[:cart_id])
     
-    product = Product.find(params[:id])
+    product = Product.find(@line_item.product.id)
     @line_item = @cart.delete_product(product)
     product.popularity = product.popularity - 1
     product.update_attribute(:popularity, product.popularity)
@@ -92,15 +93,15 @@ class LineItemsController < ApplicationController
         format.js { @current_item = @line_item; 
                     @product = product
         }
-        format.json { redirect_to cart_path(@line_item.cart) }
+        format.json {  }
       else
         if @line_item.save
           format.html { redirect_to store_index_url }
           format.js { @current_item = @line_item;
                     @product = product }
-          format.json {redirect_to cart_path(@line_item.cart)}
+          format.json {}
         else  
-           format.json {redirect_to cart_path(@line_item.cart)}
+           format.json { render json: @line_item.errors, status: :unprocessable_entity}
           
         end
       end
