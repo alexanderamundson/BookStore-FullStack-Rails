@@ -5,10 +5,7 @@ import SearchForm from './SearchForm';
 import Cart from './Cart';
 export default class Catalog extends React.Component {
 
-    state = { books: [],
-          sort: "popularity",
-          order: "asc"
-          };
+    state = { books: [], sort: "popularity", order: "asc"  };
 
     componentDidMount = () => {
         var self = this;
@@ -60,6 +57,7 @@ export default class Catalog extends React.Component {
                 console.log(response);
                 console.log(response.data);
                 self.refs.cart.handleAddToCart(response.data);
+               
                 
             })
             .catch(function (error) {
@@ -69,6 +67,13 @@ export default class Catalog extends React.Component {
         
 
     };
+    
+    
+    handlePopularity = (books) => {
+        var temp = this.state.books;
+        temp = temp.map((book) => books.find((i) => i.id==book.id));
+        this.setState({ books: temp});
+    };
 
     render = () => {
         return (
@@ -76,7 +81,7 @@ export default class Catalog extends React.Component {
                
               <div className="row">
                 <div className="col-md-12 pull-right">
-                        <Cart ref="cart" id={this.props.cart_id}/>
+                        <Cart ref="cart" id={this.props.cart_id}/>  
                 </div>
                 <SearchForm handleSearch={this.handleSearch} />  
               </div>    
@@ -86,7 +91,7 @@ export default class Catalog extends React.Component {
                     sort ={this.state.sort}
                     order={this.state.order}
                     handleSortColumn={this.handleSortColumn}
-                    handleAddToCart={this.handleAddToCart} />
+                    handleAddToCart={this.handleAddToCart}/>
               </div>
            </div>
         );

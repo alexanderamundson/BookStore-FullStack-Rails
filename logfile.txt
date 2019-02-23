@@ -1,3 +1,87 @@
+commit a3ce1f786b05f32077245e336c1567003ca4eee3
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 21 18:42:38 2019 +0000
+
+    Set up configurations for deployment (part 4)
+
+commit 595410134c4e922abe218ec9073cd1584a416f3e
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 21 04:16:30 2019 +0000
+
+    Made buttons in SPA work correctly
+
+commit 789c44321ebb2e05f6bd916064189846be61dfb5
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 21 01:29:19 2019 +0000
+
+    AJAXified the popularity on homepage
+
+commit 7e7ba0c427787c333d965eb13c5ab2b46e9621b8
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 20 21:53:32 2019 +0000
+
+    AJAXified the minus button on homepage
+
+commit 462c29f09c7210f7f53643b45d12ee15805a85ab
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 19 23:57:31 2019 +0000
+
+    Made SPA show cart
+
+commit 58e3d15363645ef30c78cf461526f9c5a956bb6d
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 19 20:23:12 2019 +0000
+
+    Made SPA add to cart button update cart in JSON format (3.2)
+
+commit fadd7cc70a1a9f3d832ac69682841db7a4ada5b2
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 19 19:56:14 2019 +0000
+
+    removed side bar from SPA and made logo a link to homepage
+
+commit a41ec75dc11716033e8cff4de415ebbbed0abe40
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Feb 17 21:21:42 2019 +0000
+
+    AJAXifified empty cart button
+
+commit 9da69eead9a8d13726321be8cbf3428620763b90
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Fri Feb 15 16:53:05 2019 +0000
+
+    used Action Cable and CoffeeScript to update the catalog display
+
+commit e2f0f2774c057fc532442ea04b7ca50881f4a500
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 14 22:57:35 2019 +0000
+
+    Made cart partial only appear if cart is not empty (F4)
+
+commit 39370ac21b71da5a04015c41d22e05a3b78b6f03
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 14 22:45:04 2019 +0000
+
+    Used CSS to highlight new lineItems in the cart (F3)
+
+commit 7f731f7771af19e928babcd238b6037f9368b431
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 14 20:12:42 2019 +0000
+
+    Finished AJAXification of add to cart button on store page. (F2)
+
+commit 24f5cd9af11175dad0eef3896ff6cd604e62156a
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Thu Feb 14 19:44:54 2019 +0000
+
+    Made Cart display as a partial in store homepage with AJAX (F1)
+
+commit 9aa8afce31e9924f86ea552b25a216192e469129
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 12 22:07:23 2019 +0000
+
+    Made app show each product's popularity on homepage
+
 commit 431370379d5b2139ab59685ec724184a11410f72
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Tue Feb 12 19:04:11 2019 +0000

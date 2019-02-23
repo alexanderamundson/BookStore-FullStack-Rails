@@ -8,12 +8,20 @@ export default class Book extends React.Component {
     description: PropTypes.string,
     image_url: PropTypes.string,
     price: PropTypes.number,
-    popularity: PropTypes.number
+    
   };
   
   handleAddToCart = (e) => {   
     this.props.handleAddToCart(this.props.book.id); 
   };
+  
+
+  handlePopularity = (e) => {   
+    this.props.handlePopularity(this.props.book.popularity); 
+  };
+  
+    
+    
 
   render = () => {
     return(

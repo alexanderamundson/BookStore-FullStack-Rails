@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   mount ActionCable.server => '/cable'
   root 'store#index', as: 'store_index'
   get 'search', to: 'store#search'

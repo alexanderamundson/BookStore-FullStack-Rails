@@ -4,15 +4,15 @@ import LineItem from './LineItem';
 export default class LineItems extends React.Component {
  handleRemoveFromCart = (id) => {
     this.props.handleRemoveFromCart(id); 
-  };
+  };                                      
 
  render = (id) => {
-    var line_items = [];
+    var line_items = [];    
 
     var self = this;
 
-    this.props.line_items.forEach(function(line_item) {
-      line_items.push(<LineItem line_item={line_item}
+    this.props.line_items.forEach(function(line_item) {   
+      line_items.push(<LineItem line_item={line_item}     
                        handleRemoveFromCart={self.handleRemoveFromCart}
                        key={'line_item_' + line_item.id}/>);
       }

@@ -55,6 +55,7 @@ export default class Cart extends React.Component {
         self.setState({ id: response.data.id });
         self.setState({ total_price: response.data.total_price });
         self.setState({ line_items: response.data.line_items });
+        
 
         // window.location = response.headers.location;
       })

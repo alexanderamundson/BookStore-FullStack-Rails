@@ -12,6 +12,10 @@ export default class BookList extends React.Component {
     this.props.handleAddToCart(id);
   };
   
+  handlePopularity = (books) =>{
+    this.props.handlePopularity(books);
+  };
+  
   render = () => {
     var books = [];
 
@@ -19,7 +23,7 @@ export default class BookList extends React.Component {
     this.props.books.forEach(function(book) {
       books.push(<Book book={book}
                        key={'book' + book.id}
-                       handleAddToCart={self.handleAddToCart} />);
+                       handleAddToCart={self.handleAddToCart}/>);
       }
     );
 
