@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
-  before_action :ensure_cart_isnt_empty, only: :new
+  before_action :ensure_cart_isnt_empty, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
@@ -18,6 +18,10 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @order = Order.new
+    respond_to do |format|
+      format.html
+      format.json { render json: {"redirect":true,"redirect_url": new_order_path }}
+    end
   end
 
   # GET /orders/1/edit
