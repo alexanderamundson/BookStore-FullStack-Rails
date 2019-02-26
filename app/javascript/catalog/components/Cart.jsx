@@ -73,12 +73,6 @@ export default class Cart extends React.Component {
     this.setState({ line_items: cart.line_items});
   };
   
-  
-  
-  
-  
-  
-  
   handleCheckout = () => {
     var self = this;
 
@@ -86,8 +80,6 @@ export default class Cart extends React.Component {
     axios.get('/orders/new/')
       .then(function (response) {
         console.log(response.data);
-       
-        
         window.location = response.data.redirect_url;
         // window.location = response.headers.location;
       })
@@ -98,18 +90,6 @@ export default class Cart extends React.Component {
 
   };
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
  render = () => {
     if (this.state.total_price != 0) {
       return(

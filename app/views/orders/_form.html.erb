@@ -27,9 +27,10 @@
   </div>
 
   <div class="field">
-    <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order.pay_types.keys, id: :order_pay_type,
-                  prompt: 'Select a payment method' %>
+    <%= content_tag :div,
+      id: "order_pay_type"  do %>
+      <%= javascript_pack_tag 'pay_type_selector' %>
+    <% end %> 
   </div>
 
   <div class="actions">
