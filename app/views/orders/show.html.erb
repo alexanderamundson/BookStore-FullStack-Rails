@@ -33,18 +33,15 @@
         <th>Unit Price</th>
         
       </tr>
-      
        <% @products.each do |product| %>
           <tr>
             <td><%= product.title %></td>
-            
-            
-            
-            
-            
+            <% @order.line_items.each do |line_item| %>
+                <% if (product.id == line_item.product_id)%>
+                    <td><%= line_item.quantity %></td>
+                <% end %>
+            <% end %>
             <td>Total: $<%= product.price %></td>
-          
-            
           </tr>
         <% end %>
     </table>
