@@ -1,5 +1,6 @@
 class Order < ApplicationRecord
     has_many :line_items, dependent: :destroy
+    has_many :products, through: :line_items
     enum pay_type: {
       "Check" => 0,
       "Credit card" => 1,

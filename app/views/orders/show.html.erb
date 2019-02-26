@@ -22,3 +22,26 @@
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
+
+<div class="container">
+    <h3>What books does this order contain???????????</h3>
+    <table class="table table-striped">
+      <tr>
+        <th>Title</th>
+        <th>Nr. Copies</th>
+        <th>Unit Price</th>
+        
+      </tr>
+      
+       <% @products.each do |product| %>
+          <tr>
+            <td><%= product.title %></td>
+          
+            
+          </tr>
+        <% end %>
+      
+        
+    </table>
+</div>
