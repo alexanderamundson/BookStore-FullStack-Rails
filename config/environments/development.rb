@@ -64,7 +64,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'https://9df4a063687b41a79175ef77c8dc2724.vfs.cloud9.us-east-2.amazonaws.com/.c9users.io'
+  host = 'https://project6-alexander-amundson.herokuapp.com.c9users.io'
   config.action_mailer.default_url_options = {host: '0.0.0.0:8080' }
   ActionMailer::Base.smtp_settings = {
         :address        => 'smtp.sendgrid.net',

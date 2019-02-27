@@ -3,6 +3,8 @@ class OrdersController < ApplicationController
   before_action :set_cart, only: [:new, :create]
   before_action :ensure_cart_isnt_empty, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_order
+   
 
   # GET /orders
   # GET /orders.json
@@ -78,6 +80,7 @@ class OrdersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -91,4 +94,8 @@ class OrdersController < ApplicationController
       end
     end
     
+    def invalid_order
+      logger.error "Attempt to access invalid order #{params[:id]}"
+      redirect_to store_index_url, notice: 'Invalid order!'
+    end
 end

@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
-
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
 <p>
   <strong>Name:</strong>
   <%= @order.name %>
@@ -20,8 +21,6 @@
   <%= @order.pay_type %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
 
 
 <div class="container">
@@ -46,3 +45,6 @@
         <% end %>
     </table>
 </div>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>
