@@ -1,3 +1,57 @@
+commit 5ffbc7cad65cd8edcf7e23aadb46b36874f92d8c
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 27 21:17:35 2019 +0000
+
+    updated action cable to work with p6
+
+commit 87ae42df1b1456d3999e4f147b962bc41cd72798
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 27 21:11:40 2019 +0000
+
+    Handled users typing in incorrect order# in url
+
+commit 39f4e57e2789a1d79566eb9360cd5a606fbb329c
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Feb 27 18:40:08 2019 +0000
+
+    Made app send order confirmation emails (part 5)
+
+commit ca1ca1fd4d4c35c6e868b85f3029ee969ed364f4
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 26 23:36:49 2019 +0000
+
+    Made orders show display quantity of each ordered product
+
+commit ec8558129ac858a185e2f613aa825ff71f2584e5
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 26 22:54:23 2019 +0000
+
+    Paginated 99 orders with faker gem (Part 4)
+
+commit c6a9194c3a62013962602d1ef543d152eba2eafc
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 26 21:23:51 2019 +0000
+
+    Created m-to-n relationship to diplay products and order show pages (Part 3)
+
+commit 75b9be7f209416f814d1440de7cf4224f6763578
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Feb 26 00:10:33 2019 +0000
+
+    Added payment type React component (2.1-2.2)
+
+commit dc43e80db0057d806a00358bdb8a8c65032f34d3
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Feb 24 23:40:26 2019 +0000
+
+    Added checkout button on SPA page
+
+commit 2a7dd27c9017f0d69179a9c25be6992a32e15674
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sat Feb 23 21:49:58 2019 +0000
+
+    Created order form (Task G)
+
 commit a3ce1f786b05f32077245e336c1567003ca4eee3
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Thu Feb 21 18:42:38 2019 +0000
