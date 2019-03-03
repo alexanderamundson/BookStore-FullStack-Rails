@@ -8,10 +8,6 @@ class StoreController < ApplicationController
       session[:counter] = 0
     else
       session[:counter] += 1
-      if session[:counter] > 5
-        flash.now[:index]="You visited the catalog #{session[:counter]}
-           times".pluralize(session[:counter])+" without buying anything!... Come on!"
-      end
     end    
     
     respond_to do |format|

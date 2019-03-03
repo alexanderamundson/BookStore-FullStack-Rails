@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'search', to: 'store#search'
   resources :carts
   resources :products
+  resources :buyers, only: [:edit, :update]
+  resources :sellers, only: [:edit, :update]
 
   get 'carts/:id', to: 'carts#show', as: 'myCart' 
   
