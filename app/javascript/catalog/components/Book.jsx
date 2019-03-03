@@ -26,6 +26,16 @@ export default class Book extends React.Component {
   render = () => {
     return(
       <tr className="spa_entry">
+      
+        { this.props.seller ?  <td /> : 
+          <td>
+            <a className="btn btn-success"
+              onClick={this.handleAddToCart} >
+              Add to Cart
+            </a>
+          </td>  
+        }
+      
         <td>
           <img src={this.props.book.image_url.url} />
         </td>      

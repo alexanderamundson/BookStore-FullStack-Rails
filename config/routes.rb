@@ -16,6 +16,13 @@ Rails.application.routes.draw do
       patch "decrement"
     end
   end
+  resources :sellers do
+    resources :products                                         # a nested route: seller_products_path
+
+    member do
+        get 'orders', to: 'line_items#show_orders_for_seller'   # a nested route: orders_seller_path
+    end
+end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
 end

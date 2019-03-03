@@ -23,13 +23,17 @@ export default class BookList extends React.Component {
     this.props.books.forEach(function(book) {
       books.push(<Book book={book}
                        key={'book' + book.id}
+                       seller={self.props.seller}
                        handleAddToCart={self.handleAddToCart}/>);
       }
     );
 
     return(
+      
       <table className="table table-striped" width="auto">
+        
         <thead>
+          { this.props.seller ?  <th /> : <th scope="col">Actions</th> }
           <tr>
             <th scope="col">Image url</th>          
             <th scope="col" className="sortable">
