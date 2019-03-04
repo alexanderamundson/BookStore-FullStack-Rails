@@ -28,8 +28,9 @@
 
   <div class="field">
     <%= content_tag :div,
-      id: "order_pay_type"  do %>
-      <%= javascript_pack_tag 'pay_type_selector' %>
+       id: "order_pay_type",
+       pay_type: order.pay_type  do %>
+       <%= javascript_pack_tag 'pay_type_selector' %>
     <% end %> 
   </div>
 

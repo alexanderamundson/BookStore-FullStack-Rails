@@ -1,4 +1,5 @@
 class LineItemsController < ApplicationController
+  before_action :authenticate_account!
   skip_before_action :verify_authenticity_token
   include CurrentCart
   before_action :set_cart, only: [:create]

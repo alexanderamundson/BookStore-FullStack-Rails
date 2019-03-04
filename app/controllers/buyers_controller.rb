@@ -1,4 +1,5 @@
 class BuyersController < ApplicationController
+  before_action :authenticate_account!
   before_action :set_buyer, only: [:edit, :update]
 
   # GET /buyers/1/edit
