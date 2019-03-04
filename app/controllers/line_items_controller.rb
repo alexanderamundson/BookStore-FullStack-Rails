@@ -6,7 +6,9 @@ class LineItemsController < ApplicationController
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_line_item
   
-  
+  def pundit_user
+    current_account
+  end
 
   # GET /line_items
   # GET /line_items.json
@@ -111,7 +113,8 @@ class LineItemsController < ApplicationController
   end
   
   def show_orders_for_seller
-    seller = Seller.find(params[:id])   
+    seller = Seller.find(params[:id]) 
+    authorize seller, :show_orders_for_seller?
     products = seller.products
     @line_items = LineItem.where(product_id: products)
     products.each do |product|
