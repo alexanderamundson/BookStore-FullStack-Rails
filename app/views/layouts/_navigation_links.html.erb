@@ -7,12 +7,12 @@
         <%= link_to "Catlog(SPA)", store_index_path(spa: true), class: "dropdown-item" %>
     </div>
 </li>
-
+    
 <% if account_signed_in? %>
-  
-  <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Resources <span class="caret"></span>
+    <% if current_account.accountable_type != "SuperAccount" %>
+    <li role="presentation" class="dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Resources <span class="caret" ></span>
             </a>
             <ul class="dropdown-menu">
                     <% if current_account.accountable_type == "Seller" %>
@@ -22,8 +22,9 @@
                         <%= link_to 'My Orders', buyer_orders_path(current_account.accountable_id), class: "dropdown-item" %>
                     <% end %>
             </ul>
-  </li>
-  
+    </li>
+   
+   
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" href="#" id="editAccountDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       Edit Settings (<%= (current_account.accountable.name.nil? or current_account.accountable.name == "") ? "No Name" : current_account.accountable.name %>)
@@ -36,6 +37,10 @@
       <%= link_to 'Account Settings', edit_account_registration_path, class: "dropdown-item"  %>
     </div>
   </li>
+  <% end %>
+  <% if current_account.accountable_type == "SuperAccount" %>
+    <li class="nav-item"><%= link_to 'Admin Dashboard', admin_root_path, class:"nav-link"  %></li>
+  <% end %>  
   <li class="nav-item">
     <%= link_to 'Sign out', destroy_account_session_path, :method=>'delete', class:"nav-link" %>
   </li>

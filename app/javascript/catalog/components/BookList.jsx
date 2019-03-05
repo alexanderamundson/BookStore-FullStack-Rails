@@ -3,17 +3,12 @@ import Book from './Book';
 import SortColumn from './SortColumn';
 
 export default class BookList extends React.Component {
-  
   handleSortColumn = (name, order) => {
     this.props.handleSortColumn(name, order);
   };
   
   handleAddToCart = (id) =>{
     this.props.handleAddToCart(id);
-  };
-  
-  handlePopularity = (books) =>{
-    this.props.handlePopularity(books);
   };
   
   render = () => {
@@ -24,14 +19,12 @@ export default class BookList extends React.Component {
       books.push(<Book book={book}
                        key={'book' + book.id}
                        seller={self.props.seller}
-                       handleAddToCart={self.handleAddToCart}/>);
+                       handleAddToCart={self.handleAddToCart} />);
       }
     );
 
     return(
-      
       <table className="table table-striped" width="auto">
-        
         <thead>
           { this.props.seller ?  <th /> : <th scope="col">Actions</th> }
           <tr>
@@ -63,7 +56,7 @@ export default class BookList extends React.Component {
                 order={this.props.order}
                 handleSortColumn={this.handleSortColumn}
               />
-            </th>
+            </th> 
             <th scope="col">Actions</th>
           </tr>
         </thead>
@@ -71,6 +64,6 @@ export default class BookList extends React.Component {
           {books}
         </tbody>
       </table>
-    )
+    );
   }
 }

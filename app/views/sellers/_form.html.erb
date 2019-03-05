@@ -4,7 +4,7 @@
     <h2>Edit <%= @seller.name %>'s Profile</h2>
 <% end %>
 
-<%= simple_form_for(@seller, as: @seller, url: seller_path(@buyer), html: { method: :patch }) do |f| %>
+<%= simple_form_for(@seller, as: @seller, url: seller_path(@seller), html: { method: :patch }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">

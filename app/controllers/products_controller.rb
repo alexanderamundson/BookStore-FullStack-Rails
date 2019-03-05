@@ -12,16 +12,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    #  if (params[:seller_id])
-    #   @seller = Seller.find(params[:seller_id])
-    #   @products = @seller.products
-    # else
-    #   @products = Product.all
-    # end   
+     if (params[:seller_id])
+       @seller = Seller.find(params[:seller_id])
+       @products = @seller.products
+     else
+       @products = Product.all
+     end   
 
     # The following is much neater than above, isn't it?
-    authorize Product 
-    @products = policy_scope(Product)
+    #authorize Product 
+    #@products = policy_scope(Product)
   end
 
   # GET /products/1

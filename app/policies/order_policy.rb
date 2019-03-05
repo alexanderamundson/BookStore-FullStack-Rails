@@ -11,7 +11,7 @@ class OrderPolicy
         current_account.accountable_type == "Buyer"
     else
         false
-     end 
+    end 
   end
 
   def show?

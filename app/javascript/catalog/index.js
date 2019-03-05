@@ -6,5 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const catalog = document.querySelector("#catalog");
     const cart_id = JSON.parse(catalog.getAttribute("cart_id"));
     const seller = JSON.parse(catalog.getAttribute("seller"));
-    ReactDOM.render(<Catalog cart_id={cart_id} seller={seller} />, catalog);
+    ReactDOM.render(<Catalog cart_id={cart_id} seller={seller} />, catalog)
+    
 });
