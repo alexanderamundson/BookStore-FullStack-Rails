@@ -68,11 +68,17 @@ export default class Catalog extends React.Component {
    }; 
     
     render = () => {
+        // If there is true_cart_id from the Cancel Link (see OrderForm in the previous step), we will use it.
+        // ES6 destructing assginment syntax
+        var {true_cart_id} = this.props.location
+        
+        
         return (
+          
             <div className="container">
               <div className="row">
                 <div className="col-md-12 pull-right">
-                    <Cart ref="cart" id={this.props.cart_id} handlePopularity={this.handlePopularity} url={this.props.match.url}/>
+                    <Cart ref="cart" id={true_cart_id ? true_cart_id : this.props.cart_id} handlePopularity={this.handlePopularity} url={this.props.match.url}/>
                         
                 </div>
                 <SearchForm handleSearch={this.handleSearch} />

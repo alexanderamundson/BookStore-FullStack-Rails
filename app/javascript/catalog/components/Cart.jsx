@@ -102,9 +102,13 @@ export default class Cart extends React.Component {
                  Empty Cart
               </a>
               &nbsp;
-              <Link className="btn btn-success" to={{pathname:"/order_form"}}>
-                  Checkout
-              </Link>
+              {
+                //  Since on the catalog page, a new cart id will be generated after the cart is emptied and then recreated,
+                //  we need to pass the true (and new) cart id to "Link" such that the cart on the OrderForm page could be properly rendered.
+              }
+              <Link className="btn btn-success" to={{pathname:"/order_form", true_cart_id: this.state.id}}>
+                Checkout
+             </Link>
             </div>
           )
           :
