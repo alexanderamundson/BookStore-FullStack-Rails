@@ -1,6 +1,6 @@
 import React from 'react'
 
-class CreditCardPayType extends React.Component {
+export default class CreditCardPayType extends React.Component {
   render() {
     return (
       <div>
@@ -8,7 +8,9 @@ class CreditCardPayType extends React.Component {
           <label htmlFor="order_credit_card_number">CC #</label>
           <input type="password"
                  name="order[credit_card_number]" 
-                 id="order_credit_card_number" />
+                 id="order_credit_card_number"
+                 className="form-control form-control-lg" />
+          
         </div>
         <div className="field">
           <label htmlFor="order_expiration_date">Expiry</label>
@@ -16,10 +18,10 @@ class CreditCardPayType extends React.Component {
                  name="order[expiration_date]" 
                  id="order_expiration_date"
                  size="9"
-                 placeholder="e.g. 03/19" />
+                 placeholder="e.g. 03/19" 
+                 className="form-control form-control-lg" />
         </div>
       </div>
     );
   }
 }
-export default CreditCardPayType
