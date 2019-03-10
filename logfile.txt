@@ -1,3 +1,69 @@
+commit 2111b5b0beab4415e4a1bd19cdd993ac42d27ce9
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Mar 6 00:09:42 2019 +0000
+
+    Made environment files ready for pushing to heroku
+
+commit 41811b827e0056d3f2deecae77e2fdd436ee10af
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Wed Mar 6 00:05:38 2019 +0000
+
+    Made environment files ready for pushing to heroku
+
+commit aa52aeaf63e6ea7a7ac94802f038947a61d93d89
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Tue Mar 5 23:51:30 2019 +0000
+
+    Added administrate gem for admin dashboard
+
+commit 6bfa46cfbbecd6560a2ac8df37111d4bf2f3e8be
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Mar 4 20:12:58 2019 +0000
+
+    Used Pundit to ensure proper authorization for products/buyers/sellers/orders pages
+
+commit ad7abb953be7705ea414b421cdb470722ee33474
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Mar 4 18:08:43 2019 +0000
+
+    Automated population of DB with products/sellers for testing (part 4)
+
+commit 184602ff4f3d59c61fe43f17848718d8e2c8d656
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Mon Mar 4 00:39:44 2019 +0000
+
+    Binded orders to buyers (Buyers only see their orders) (3.2)
+
+commit 05d91094bcd8177d64e8273904fbf58238491c92
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Mar 3 22:55:17 2019 +0000
+
+    Made buyers/sellers only see that which belongs to them (3.1)
+
+commit 6159ebf634123cc54f12a54e83843cee202d2a19
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sun Mar 3 21:50:09 2019 +0000
+
+    Created edit/ update methods for buyers/sellers (2.4)
+
+commit 408ac94e91bd8e79a7d4952663d2a85b262582e0
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sat Mar 2 22:54:29 2019 +0000
+
+    Used devise to perform user authentication for buyers/sellerss (2.3)
+
+commit 47b29a7d6b1c58feafbef4711fa109eb07e23076
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sat Mar 2 21:55:14 2019 +0000
+
+    Added sign up link (2.2)
+
+commit 3bb62e0fe8619dac55b5a2a9bf0b26df6b4525b0
+Author: alexanderamundson <alex.amundson987@gmail.com>
+Date:   Sat Mar 2 21:39:39 2019 +0000
+
+    Added bootstrap navbar (2.1)
+
 commit 5ffbc7cad65cd8edcf7e23aadb46b36874f92d8c
 Author: alexanderamundson <alex.amundson987@gmail.com>
 Date:   Wed Feb 27 21:17:35 2019 +0000
