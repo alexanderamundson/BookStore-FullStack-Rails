@@ -45,8 +45,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  config.action_cable.url = 'wss://project7-alexander-amundson.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = [ 'http://project7-alexander-amundson.herokuapp.com/']
+  config.action_cable.url = 'wss://project8-alexander-amundson.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'http://project8-alexander-amundson.herokuapp.com/']
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
@@ -97,7 +97,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  host = 'project7-Alexander-Amundson.herokuapp.com'
+  host = 'project8-Alexander-Amundson.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
         :address        => 'smtp.sendgrid.net',
