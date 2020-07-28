@@ -57,7 +57,7 @@ gem 'webpacker'
 gem "jquery-rails"
 gem "bootstrap", "~> 4.2.1"
 gem "font-awesome-rails"
-gem 'json', '2.0.2'
+gem 'json', '2.3.0'
 gem 'faker'
 gem 'kaminari'
 gem 'figaro'
